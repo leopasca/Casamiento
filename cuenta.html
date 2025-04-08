@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cuenta Regresiva</title>
+  <title>¡Nos casamos! ❤️</title>
   <style>
     :root {
-      --bg-color: #0f0f0f;
-      --text-color: #f0f0f0;
-      --accent-color: #00ffff;
+      --bg-color: #fdf6f8;
+      --text-color: #333;
+      --accent-color: #e91e63;
       --font-main: 'Segoe UI', sans-serif;
     }
 
@@ -27,31 +27,31 @@
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
+      color: var(--accent-color);
       margin-bottom: 2rem;
     }
 
     #countdown {
       display: flex;
       gap: 1rem;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       font-weight: bold;
-      color: var(--accent-color);
       flex-wrap: wrap;
       justify-content: center;
     }
 
     .time-unit {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(233, 30, 99, 0.1);
       padding: 1rem 1.5rem;
-      border-radius: 1rem;
-      min-width: 80px;
+      border-radius: 1.5rem;
+      min-width: 90px;
       animation: fadeIn 0.5s ease-in-out;
     }
 
     .label {
       font-size: 0.8rem;
-      color: #aaa;
+      color: #666;
       margin-top: 0.5rem;
       display: block;
     }
@@ -63,20 +63,17 @@
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
       }
       #countdown {
-        font-size: 1.5rem;
-      }
-      .time-unit {
-        padding: 0.5rem 1rem;
+        font-size: 1.4rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <h1>Cuenta Regresiva para el Evento 🎉</h1>
+  <h1>¡Nos casamos! ❤️</h1>
   <div id="countdown">
     <div class="time-unit"><span id="days">00</span><span class="label">días</span></div>
     <div class="time-unit"><span id="hours">00</span><span class="label">horas</span></div>
@@ -85,7 +82,6 @@
   </div>
 
   <script>
-    // Fecha objetivo - cambia esto a tu evento
     const targetDate = new Date("June 8, 2025 12:30:00").getTime();
 
     const updateCountdown = () => {
@@ -93,7 +89,7 @@
       const diff = targetDate - now;
 
       if (diff <= 0) {
-        document.getElementById("countdown").innerHTML = "¡El evento ha comenzado! 🎉";
+        document.getElementById("countdown").innerHTML = "💍 ¡Hoy es el gran día! Que viva el amor ❤️";
         clearInterval(timer);
         return;
       }
